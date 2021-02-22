@@ -1,3 +1,12 @@
 body {
     padding-top: 5rem;
 }
+
+.category .flash li{
+    font-size: 20px;
+    color: greenyellow;
+}
+
+.required {
+    color: red;
+}
