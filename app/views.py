@@ -32,8 +32,8 @@ def about():
 
 def contact():
     form= Contactform()
-    if form.validate_on_submit():
-        msg=Message(request.form['subject'], sender=(request.form['name'], request.form['email']), recipients=['jody.harrison32@gmail.com'])
+    while form.validate_on_submit():
+        msg=Message(request.form['sub'], sender=(request.form['name'], request.form['email']), recipients=['jody.harrison32@gmail.com'])
         msg.body=request.form['body']
         mail.send(msg)
         flash('Message Sent!')
